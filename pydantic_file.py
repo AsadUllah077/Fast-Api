@@ -1,11 +1,11 @@
 from pydantic import BaseModel, Field
-from typing import List, Dict
+from typing import List, Dict, Optional
 class User(BaseModel):
     id: int 
     name: str
     weight: float
-    allergies: List[str]
-    contacts_details: Dict[str, str]
+    allergies: Optional[List[str]] = None
+    contacts_details: Dict[str, str] = {'email': 'example@example.com', 'phone': '123456'}
 
 def add_user(user: User):
     print(f"Adding user: {user} ")
