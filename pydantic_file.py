@@ -1,9 +1,10 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from typing import List, Dict, Optional, Annotated
 import json
 class User(BaseModel):
     id: int 
     email: str
+    age: int
     name: Annotated[str, Field(..., description="The name of the user", json_schema_extra={"example": "John Doe"})]
     weight: float
     allergies: Annotated[List[str], Field(default=None, description="List of allergies", json_schema_extra={"example": ["peanuts", "shellfish"]})]
@@ -17,6 +18,17 @@ class User(BaseModel):
         if domain not in valid_emails:
             raise ValueError(f"Invalid email domain. Must be one of {valid_emails}.")
         return value
+    
+    @field_validator("name")
+    @classmethod
+    def name_validator(cls, value):
+        return value.upper()
+
+    @model_validator(mode="after")
+    def emergency_contact(self):
+        if self.age > 18 and "phone" not in self.contacts_details:
+            raise ValueError("Emergency contact phone number is required for users over 18.")
+        return self
 
 
 def add_user(user: User):
@@ -25,6 +37,7 @@ def add_user(user: User):
 user_data = {
     "id": 1,
     "email": "john.doe@gmail.com",
+    "age": 25,
     "name": "John Doe",
     "weight": 70.5,
     "allergies": ["peanuts", "shellfish"],
