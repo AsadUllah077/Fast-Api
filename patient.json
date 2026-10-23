@@ -52,9 +52,11 @@
     {
         "name": "Asad Khan",
         "age": 30,
-        "city": "New York",
+        "city": "Chicago",
         "gender": "Male",
-        "height": 1.75,
-        "weight": 70.5
+        "height": 2.75,
+        "weight": 80.5,
+        "bmi": 10.644628099173554,
+        "verdict": "Underweight"
     }
 ]
