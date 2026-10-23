@@ -1,52 +1,60 @@
 [
-  {
-    "name": "Ali Khan",
-    "age": 25,
-    "city": "Peshawar",
-    "gender": "Male",
-    "height": 175,
-    "weight": 70,
-    "bmi": 22.9,
-    "verdict": "Normal weight"
-  },
-  {
-    "name": "Sara Ahmed",
-    "age": 30,
-    "city": "Islamabad",
-    "gender": "Female",
-    "height": 162,
-    "weight": 68,
-    "bmi": 25.9,
-    "verdict": "Overweight"
-  },
-  {
-    "name": "Usman Khan",
-    "age": 40,
-    "city": "Mardan",
-    "gender": "Male",
-    "height": 170,
-    "weight": 90,
-    "bmi": 31.1,
-    "verdict": "Obesity Class I"
-  },
-  {
-    "name": "Ayesha Malik",
-    "age": 22,
-    "city": "Lahore",
-    "gender": "Female",
-    "height": 160,
-    "weight": 48,
-    "bmi": 18.8,
-    "verdict": "Normal weight"
-  },
-  {
-    "name": "Hamza Ali",
-    "age": 35,
-    "city": "Karachi",
-    "gender": "Male",
-    "height": 180,
-    "weight": 55,
-    "bmi": 17.0,
-    "verdict": "Underweight"
-  }
+    {
+        "name": "Ali Khan",
+        "age": 25,
+        "city": "Peshawar",
+        "gender": "Male",
+        "height": 175,
+        "weight": 70,
+        "bmi": 22.9,
+        "verdict": "Normal weight"
+    },
+    {
+        "name": "Sara Ahmed",
+        "age": 30,
+        "city": "Islamabad",
+        "gender": "Female",
+        "height": 162,
+        "weight": 68,
+        "bmi": 25.9,
+        "verdict": "Overweight"
+    },
+    {
+        "name": "Usman Khan",
+        "age": 40,
+        "city": "Mardan",
+        "gender": "Male",
+        "height": 170,
+        "weight": 90,
+        "bmi": 31.1,
+        "verdict": "Obesity Class I"
+    },
+    {
+        "name": "Ayesha Malik",
+        "age": 22,
+        "city": "Lahore",
+        "gender": "Female",
+        "height": 160,
+        "weight": 48,
+        "bmi": 18.8,
+        "verdict": "Normal weight"
+    },
+    {
+        "name": "Hamza Ali",
+        "age": 35,
+        "city": "Karachi",
+        "gender": "Male",
+        "height": 180,
+        "weight": 55,
+        "bmi": 17.0,
+        "verdict": "Underweight"
+    },
+    {
+        "name": "Asad Khan",
+        "age": 30,
+        "city": "New York",
+        "gender": "Male",
+        "height": 1.75,
+        "weight": 70.5
+    }
 ]
