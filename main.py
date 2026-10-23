@@ -111,3 +111,14 @@ def update_patient(patient_name: str, updated_patient: UpdatePatient):
             return JSONResponse(status_code=200, content={"message": "Patient updated successfully."})
         
     raise HTTPException(status_code=404, detail="Patient not found")
+
+@app.delete("/patients/{patient_name}")
+def delete_patient(patient_name: str):
+    patients = data_load()
+    for i, patient in enumerate(patients):
+        if patient["name"].lower() == patient_name.lower():
+            del patients[i]
+            with open("patient.json", "w") as file:
+                json.dump(patients, file, indent=4)
+            return JSONResponse(status_code=200, content={"message": "Patient deleted successfully."})
+    raise HTTPException(status_code=404, detail="Patient not found")
